@@ -18,4 +18,9 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
         reader.readAsText(file);
     }
 });
- 
+
+document.getElementById('textInput').addEventListener('input', function(event) {
+    const text = event.target.value;
+    const wordCount = countWords(text);
+    document.getElementById('wordCount').innerText = `Your pasted content contains ${wordCount} words.`;
+});

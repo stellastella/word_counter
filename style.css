@@ -1,5 +1,6 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -10,9 +11,7 @@ body {
 #fileInput {
     background-color: #4CAF50; /* Add background color to the button */
     color: white;
-    border: none;
     padding: 10px 20px;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
@@ -24,6 +23,23 @@ h1 {
     color: #333333; /* Set header color to dark grey */
 }
 
-#wordCount{
+#wordCount {
     font-style: italic;
+}
+
+#textInput {
+    width: 40%;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 100%; /* Ensure divs take full width */
+  
 }
