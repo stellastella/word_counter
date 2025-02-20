@@ -21,7 +21,7 @@ The essence of this project is to also illustrate the hosting of the application
     - Enable Host a Static Website [index & error document] - index.html, error.html
     - Upload the website files - index.html, script.js, style.css, flowchart.png
 
-2. **Set up Bucket Policy**
+    **To Set up Bucket Policy**
     - Locate Permissions tab and select Bucket Policy
     - Add the policy below and click save to allow public read access to the website:
     ```json
@@ -37,19 +37,19 @@ The essence of this project is to also illustrate the hosting of the application
         ]
     }
     ```
-3. **Create a CloudFront Distribution**
+2. **Create a CloudFront Distribution**
     - Go to your AWS CloudFront console
     - Click create Distribution
     - Select S3 Bucket and choose Origin Access Control
     - Redirect HTTP to HTTPs
     - Enable Compress Objects Automatically then click create Distribution
 
-4. **Configure Custom Domain in Route 53**
+3. **Configure Custom Domain in Route 53**
     - Go to AWS Route 53 and navigate to Hosted Zones
     - Click on domain name
     - Create Alias Record : [Name : yourdomain.com, Type: Alias (A), Value: CloudFront distribution URL
 
-5. **Enable SSL with AWS Certificate Manager (ACM)**
+4. **Enable SSL with AWS Certificate Manager (ACM)**
     - Go to your AWS S3 Certificate Manager
     - Request a Public SSL Certificate [enter your domain, choose DNS Validation, Add the CNAME to Route 53]
     - Attach the certificate to your CloudFront Distribution
