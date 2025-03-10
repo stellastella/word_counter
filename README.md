@@ -8,7 +8,7 @@ The essence of this project is to also illustrate the hosting of the application
 
 ## OBJECTIVE:
 - Host a static website on S3, enable public access & configure S3 for website hosting
-- Set up CloudFront for faster content delivery
+- Set up CloudFront for faster content delive
 - Configure Route 53 for a custom domain
 - Use an SSL certificate for HTTPS
 
@@ -53,3 +53,8 @@ The essence of this project is to also illustrate the hosting of the application
     - Go to your AWS S3 Certificate Manager
     - Request a Public SSL Certificate [enter your domain, choose DNS Validation, Add the CNAME to Route 53]
     - Attach the certificate to your CloudFront Distribution
+
+
+**NB - revisit cloud front when done with steps above
+    * select the cloudfront distribution > under general click edit > under alternate domain name (CNAME), enter yourdomainname.com then save
+
